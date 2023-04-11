@@ -9,35 +9,34 @@
         div{
             font-weight: bold;
             color: rgb(89, 27, 146);
-            padding: 10px;
             width: 100px;
             height: 100px;
             border-radius: 10px;
             text-align: center;
         }
-
-        main{
-            height: 500px;
+        
+        .bloco-1{
+            background-color: rgba(75, 211, 132, 0.541);
         }
+        .bloco-2{
+            background-color: rgba(127, 238, 253, 0.822);
+        }
+        .bloco-3{
+            background-color: rgba(247, 121, 121, 0.884);
+        }
+        
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            align-content: center;
+            gap: 10px 30px;
 
-       .bloco-1{
-        background-color: rgba(75, 211, 132, 0.541);
-    }
-    .bloco-2{
-        background-color: rgba(127, 238, 253, 0.822);
-    }
-    .bloco-3{
-        background-color: rgba(247, 121, 121, 0.884);
-    }
-    
-    .container{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        align-content: center;
-        gap: 10px 30px;
+            height: 500px;
+            background-color: #f9eac3;
+            padding: 16px;
         
     }
        
@@ -56,7 +55,7 @@
 
         + flex-direction: column-reverse => Alinhados na vertical mas ao contrário
 
-
+    -----------------------------------------------------------------------------------
 
         2 propriedade:
                                 -- justify-content --
@@ -73,6 +72,7 @@
 
         + justify-content: space-around; => Dá um espaçamento não só entre os elementos do centro do eixo, mas em todos os elementos...criando uma espécie de margin entre eles.
 
+        -------------------------------------------------------------------------------
     
         3 propriedade:
                                 --align-items--
@@ -89,6 +89,7 @@
 
         + align-items: baseline => alinha todos de acordo com o conteudo
 
+    -----------------------------------------------------------------------------------
 
         4 propriedade:
                             --flex-wrap--
@@ -102,6 +103,7 @@
 
         + flex-wrap: wrap-reverse; => quebra a linha para cima
 
+        -------------------------------------------------------------------------------
     
         5 propriedade:
                             --align-content--
@@ -119,6 +121,7 @@
 
         + align-content: space-around: => gera espaços entre eles similares a margens
 
+        -------------------------------------------------------------------------------
 
         6 propriedade: 
                           --  gap, row-gap e column-gap: --

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+    .bloco-1{
+        background-color: rgba(75, 211, 132, 0.473);
+        order: 0;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+
+    }
+    .bloco-2{
+        background-color: rgba(127, 238, 253, 0.705);
+        order: 0;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+
+    }
+    .bloco-3{
+        background-color: rgba(247, 121, 121, 0.705);
+        order: 0;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        
+    }
+
+    .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            align-content: center;
+            gap: 10px 30px;
+            
+            height: 500px;
+            background-color: #f3e7c8b2;
+            padding: 16px;
+   
+    }
+
+    div{
+            font-family: 'Courier New', Courier, monospace;
+            width: 150px;
+            height: 150px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        /*
+        FLEXBOX PART2
+    
+        propriedades para os elementos filhos.
+
+        1 propriedade:
+                        --order--
+        Utilizado para dar uma sequencia(ordem) aos elementos
+        
+        order: -1; => primeiro
+        order: 0; => segundo
+        order:1; => terceiro
+
+        ---------------------------------------------------------------------------
+
+        2 propriedade
+                        --flex-grow--
+        Analisa a possibilidade do elementos crescer, e faz isso o max q conseguir
+
+        flex-grow: 1;
+
+        colocando um flex-grow 2, o tanto que ele irá crescer é proporcional (2 pra 1) ou seja o dobro do flex-grow 1 mas não necessariamente ficará com o dobro do tamanho
+
+         ---------------------------------------------------------------------------
+
+         3 propriedade
+                            --flex-shrink--
+        Habilidade que os elementos tem de encolher quando necessário..
+
+        flex-shrink: 1; => vem assim por padrão para todos os elementos
+
+        flex-shrink: 2; => Assim como no flex grow. Ele não ficara duas vezes menor...mas o tanto q ele encolherá será duas vezes mais do que o flex shrink 1
+
+        --------------------------------------------------------------------------
+
+        4 propriedade
+                        --flex-basis--
+        O flex-basis define o tamanho inicial que um item deve ter antes que o espaço ao seu redor seja distribuído. Ou seja, dependendo da direção do eixo principal (horizontal ou vertical), essa propriedade define a largura ou altura mínima do elemento antes que ele seja redimensionado por outras propriedades.
+
+        link com valores para flex basis => https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis 
+
+        ----------------------------------------------------------------------------
+
+        5 propriedade
+                        --flex--
+        É uma junção (shorthand) das propriedades flex-grow, flex-shrink e flex-basis (PRECISA SER ESCRITO NESSA ORDEM)
+
+                                    ex
+
+        flex: 0 1 auto;
+
+        ----------------------------------------------------------------------------
+
+        6 propriedade
+                        --align-self--
+
+        Funciona como um align-items, mas de forma individual(self)
+            Alinha o elemento de forma individual e possui os valores:
+            -flex-start
+            -flex-end
+            -center
+        */
+        
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="bloco-1">1</div>
+        <div class="bloco-2">2</div>
+        <div class="bloco-3">3</div>
+        <!-- <div class="bloco-1">4</div>
+        <div class="bloco-2">5</div>
+        <div class="bloco-3">6</div>
+        <div class="bloco-1">7</div>
+        <div class="bloco-2">8</div>
+        <div class="bloco-3">9</div>
+        <div class="bloco-1">10</div>
+        <div class="bloco-2">11</div>
+        <div class="bloco-3">12</div> -->
+    </main>
+</body>
+</html>
