@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        div{
+            font-weight: bold;
+            color: rgb(89, 27, 146);
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        main{
+            height: 500px;
+        }
+
+       .bloco-1{
+        background-color: rgba(75, 211, 132, 0.541);
+    }
+    .bloco-2{
+        background-color: rgba(127, 238, 253, 0.822);
+    }
+    .bloco-3{
+        background-color: rgba(247, 121, 121, 0.884);
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+        gap: 10px 30px;
+        
+    }
+       
+       /*
+       1 propriedade:
+                                 -- flex-direction --
+       Com o flex-direction podemos alternar o eixo principal q a caixa segue
+
+                                - Valores da propriedade: -
+        
+        + flex-direction: rouw; => Deixa os elementos alinhados na horizontal da esquerda para a direita
+
+        + flex-direction: row-reverse; => Alinhados na horizontal da direita para a esquerda, ou seja, ao contrário
+
+        + flex-direction: column; => Alinhados na vertical em forma de coluna
+
+        + flex-direction: column-reverse => Alinhados na vertical mas ao contrário
+
+
+
+        2 propriedade:
+                                -- justify-content --
+        Utilizado para alinhar os elementos no eixo principal, seja ele o horizontal ou vertical
+                                 - Valores da propriedade: -
+
+       + justify-content: flex-start; => Alinha os elementos no inicio do eixo principal
+
+       + justify-content: flex-end; => Alinha os elementos no final do eixo principal
+
+       + justify-content: center; => Alinha os elementos no centro do eixo principal
+
+       + justify-content: space-between; => Alinha o primeiro elemento no inicio, o ultimo elemento no final, e os outros elementos são distribuidos no centro do eixo com um mesmo espaçamento entre eles.
+
+        + justify-content: space-around; => Dá um espaçamento não só entre os elementos do centro do eixo, mas em todos os elementos...criando uma espécie de margin entre eles.
+
+    
+        3 propriedade:
+                                --align-items--
+        Alinha os itens no eixo perpendicular (Eixo que não é o principal)  no caso acima, o vertical
+                                 - Valores da propriedade: -
+                                
+        + align-items: flex-start; => alinha no inicio do eixo secundário
+
+        + align-items: flex-end; => alinha no final do eixo secundário
+
+        + align-items: center; => alinha no centro do eixo
+
+        + align-items: stretch; => faz os elementos ocuparem todo o espaço disponivel no eixo
+
+        + align-items: baseline => alinha todos de acordo com o conteudo
+
+
+        4 propriedade:
+                            --flex-wrap--
+        Ativa a quebra de linha após os elementos ocuparem todo o eixo 
+
+                                - Valores da propriedade: -
+
+        + flex-wrap: nowrap; => desativa a quebra de linhas (todos os itens vao  tentar ficar alinhados o max possivel)
+
+        + flex-wrap: wrap; => ativa a quebra de linhas
+
+        + flex-wrap: wrap-reverse; => quebra a linha para cima
+
+    
+        5 propriedade:
+                            --align-content--
+        Alinhar elementos em mais de uma linha com o wrap ativado
+
+                              - Valores da propriedade: -
+
+        + align-content: flex-start; => ambas as linhas vão ficar alinhadas no inicio do eixo
+
+        + align-content: flex-end; => ambas as linhas vão ficar alinhadas no final do eixo
+
+        + align-content: center; => vão ficar juntar no centro
+
+        + align-content: space-between; => gera um espaço entre os elementos
+
+        + align-content: space-around: => gera espaços entre eles similares a margens
+
+
+        6 propriedade: 
+                          --  gap, row-gap e column-gap: --
+        Gera um tipo de margem entre os elementos separando-os
+
+        + gap: 10px; => gera uma margem nos elementos de 10px tanto para o top/bottom quanto para o right/left
+
+        + gap: 10px 30px; => agora temos um gap de 10px para as linhas e um de 30 para as colunas
+
+                                    ou podemos deixar de uma forma mais clara no código
+                            
+        + row-gap: 10px;
+
+        + column-gap: 30px;
+
+       */
+
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="bloco-1">1</div>
+        <div class="bloco-2">2</div>
+        <div class="bloco-3">3</div>
+        <div class="bloco-1">4</div>
+        <div class="bloco-2">5</div>
+        <div class="bloco-3">6</div>
+        <div class="bloco-1">7</div>
+        <div class="bloco-2">8</div>
+        <div class="bloco-3">9</div>
+        <div class="bloco-1">10</div>
+        <div class="bloco-2">11</div>
+        <div class="bloco-3">12</div>
+    </main>
+</body>
+</html>
